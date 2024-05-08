@@ -13,6 +13,7 @@ async def send_message_zelenka(app: Client):
                 photo=config.BANNER_ID,
                 parse_mode=enums.ParseMode.HTML
             )
+        print("Отправил зелёнка")
     except:
         pass
 
@@ -26,6 +27,7 @@ async def send_message_scrouge(app: Client):
                 photo=config.BANNER_ID,
                 parse_mode=enums.ParseMode.HTML
             )
+        print("Отправил скрудж")
     except:
         pass
 
@@ -40,6 +42,7 @@ async def send_message_kiwi(app: Client):
                 photo=config.BANNER_ID,
                 parse_mode=enums.ParseMode.HTML
             )
+            print("Отправил kiwi")
     except:
         print("Не смог отправить в kiwi")
         pass
