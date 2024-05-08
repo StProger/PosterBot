@@ -41,6 +41,7 @@ async def send_message_kiwi(app: Client):
                 parse_mode=enums.ParseMode.HTML
             )
     except:
+        print("Не смог отправить в kiwi")
         pass
 
 
