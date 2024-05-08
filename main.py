@@ -4,6 +4,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from messages import send_message_kiwi, send_message_scrouge, send_message_zelenka, send_other
 
 app = Client("my_account")
+
 scheduler = AsyncIOScheduler()
 
 async def main():
