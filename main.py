@@ -8,10 +8,10 @@ scheduler = AsyncIOScheduler()
 
 async def main():
 
-    scheduler.add_job(send_message_scrouge, "cron", hour=12, day="*")
-    scheduler.add_job(send_message_kiwi, "interval", hour=10)
-    scheduler.add_job(send_message_zelenka, "interval", hour=8)
-    scheduler.add_job(send_other, "interval", hour=8)
+    scheduler.add_job(send_message_scrouge, "cron", hour=12, day="*", args=[app,])
+    scheduler.add_job(send_message_kiwi, "interval", hour=10, args=[app,])
+    scheduler.add_job(send_message_zelenka, "interval", hour=8, args=[app,])
+    scheduler.add_job(send_other, "interval", hour=8, args=[app,])
     scheduler.start()
 
 app.run(main())
